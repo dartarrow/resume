@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% Modified by Alvin Jude
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+
+\usepackage{multicol}
+\setlength{\multicolsep}{0pt} 
+
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2014} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=0em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+\newcommand{\Columize}[2]{\noindent \parbox{2cm}{\textsl{#1}} {#2} } % Add some white space after each new entry
+\newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Redvline}[0]{\vspace{1em}\noindent{\color{Maroon}\rule{12cm}{0.4pt}}}
+\newcommand{\MyName}[1]{\noindent\spacedallcaps\LARGE{\color{Maroon}#1}} % Font color of your name at the top
+%% Generally #1: margin left contents, #2: Dates #3 Title
+\newcommand{\NewBlock}[3]{\MarginText{\newline #1} {\noindent\hangindent=0em\hangafter=0\small\textit{#2}}\ \ $\cdotp$\ \ #3 \vspace{0.5em}} 
+\newcommand{\BlockTitle}[1]{\noindent\spacedlowsmallcaps{#1} \vspace{1em}}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\MyName{Alvin Jude} % Your name <-- Slight problem here with the color, hence the braces. 
+
+\vspace{-0.3em}
+
+\Redvline
+
+\begin{multicols}{2}\vspace{0.5em}
+\Columize{nationality}{Malaysian} % Birthplace and date
+
+\Columize{d.o.b.}{9 March 1984} % Birthplace and date
+
+\Columize{residence}{Waco, TX} % Birthplace and date
+
+\columnbreak
+
+\Columize{email}{\href{mailto:alvin@dartarrow.net}{alvin@dartarrow.net}} % Email address
+
+\Columize{website}{\href{http://dartarrow.net}{http://dartarrow.net}} % Personal website
+
+\Columize{phone}{(254) 413 1023 } % Phone number(s)
+
+\end{multicols}
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\BlockTitle{Goal} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Gain fundamental experience in my area of interest and expertise.} % Goal text
+
+\Redvline
+
+%----------------------------------------------------------------------------------------
+%       EDUCATION
+%----------------------------------------------------------------------------------------
+\BlockTitle{Education}
+
+\NewBlock{Masters of \\Computer Science}{2012--Present}{Baylor University}
+
+\Description{Research Area: Human Computer Interaction}
+%------------------------------------------------
+%------------------------------------------------
+
+\NewBlock{Bachelor of Computer Science}{2002-2005}{Coventry University}
+
+\Description{\textsc{Rank: }Honours, Second Class Upper
+\newline
+\textsc{Thesis:} Remote PC Manipulation via PDA over Bluetooth
+}
+%------------------------------------------------
+
+\Redvline
+%----------------------------------------------------------------------------------------
+%       PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\BlockTitle{Publications}
+
+\Description{Alvin Jude, G. Michael Poor, and Darren Guinness, \textsl{Personal Space: User Defined Gesture Space for GUI Interaction}. To appear in CHI 2014 Extended Abstracts, ACM 978-1-4503-2474-8/14/04. doi:10.1145/2559206.2581242.}
+
+%------------------------------------------------
+
+
+\Redvline
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\BlockTitle{Work Experience}
+
+\NewBlock{Baylor University}{2013--Present}{Research Assistant}
+
+\Description{Tasked to setup newly formed Human Computer Interaction lab. Mentored juniors, established engineering procedures and infrastructure. Performed research in Hand-Gestural interaction and explored research options with other next-generation devices. \\Reference: G. Michael Poor\ \ $\cdotp$\ \href{mailto:michael\_poor@baylor.edu}{michael\_poor@baylor.edu}}
+
+\NewBlock{}{2012--2013}{Teaching Assistant}
+
+\Description{On top of general TA duties, also introduced fixes and developer's manual to software used in-house for teaching databases. 
+\\ Reference: Greg Speegle\ \ $\cdotp$\ \ \href{mailto:greg\_speegle@baylor.edu}{greg\_speegle@baylor.edu}}
+
+%------------------------------------------------
+
+\NewBlock{Self Employed}{2010--2012}{Technical Consultant}
+
+\Description{Served as an independent consultant for various project and companies including the following:}
+
+\NewBlock{}{2011--2012}{iOS Development, \textsc{Agile Perspectives --- Malaysia}}
+
+\Description{Developed iOS applications for an international insurance corporation, as well as one iOS app for a consumer-facing startup dealing in retail}
+
+\NewBlock{}{2010--2011}{System Administrator, \textsc{CouchSurfing.org}}
+
+\Description{Daily operations: monitoring, security, optimization, deployment, etc. Tools of the trade included Puppet, Zabbix, HAProxy. Deployed a cluster of static content servers (NGinX) to reduce the load off the dynamic servers which resulted in much higher reliability.}
+
+%------------------------------------------------
+
+\NewBlock{Aflexi}{2009--2010}{System Engineer}
+
+\Description{Aflexi was a CDN Software startup, and is currently a division of OnApp. My responsibilities were more DevOps involving backend development and system administration. I built a monitoring infrastructure with Nagios, Collectd, and custom software feeding PowerDNS for DNS-based CDN routing. Tools of the trade also included Puppet, Zabbix, Reprepro, RRD.
+\\Reference: Whei Wong\ \ $\cdotp$\ \ \href{mailto:whei.wong@onapp.com}{whei.wong@onapp.com}}  
+
+%------------------------------------------------
+
+\NewBlock{iMocha Consulting}{2007--2010}{Team Lead}
+
+\Description{Initially hired as a Junior Java Developer, I eventually built and ran a LAMP team of up to 8 people, dealing mostly with financial institutions. Responsibilities included hiring, firing, and mentoring programmers, system administrators, system analysts, and interns, as well as requirements gathering from clients. 
+\\Reference: Koh Kok Wei\ \ $\cdotp$\ \ \href{mailto:kokwei@imocha.com.my}{kokwei@imocha.com.my}}
+%------------------------------------------------
+
+\NewBlock{Sony Manufacturing}{2005--2007}{Engineer, \textsc{Sony EMCS --- Malaysia}}
+
+\Description{Developed Linux-based software required for manufacturing. Also wrangled servers used in manufacturing and supply chain. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK}
+%------------------------------------------------
+
+\Redvline
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\BlockTitle{Computer Skills}
+
+\Description{\MarginText{Basic} R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\#}
+
+\Description{\MarginText{Intermediate} Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ \textsc{svn} $\cdotp$\ Objective-C $\cdotp$\ Android}
+
+\Description{\MarginText{Advanced} NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP $\cdotp$\ MySQL $\cdotp$\ Java}
+
+%------------------------------------------------
+\Redvline
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\BlockTitle{Other Information}
+
+\Description{\MarginText{Communication}Former Malaysian Public Speaking Champion}
+
+\Description{\MarginText{Entrepreneurship}Baylor Newventure Finalist -- Top 5}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Native}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Malay}}\ \ $\cdotp$\ \ \ Intermediate }
+
+\end{document}  
