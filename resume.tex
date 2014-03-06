@@ -42,7 +42,7 @@
 \newcommand{\Columize}[2]{\noindent \parbox{2cm}{\textsl{#1}} {#2} } % Add some white space after each new entry
 \newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 \newcommand{\Redvline}[0]{\vspace{1em}\noindent{\color{Maroon}\rule{12cm}{0.4pt}}}
-\newcommand{\MyName}[1]{\noindent\spacedallcaps\LARGE{\color{Maroon}#1}} % Font color of your name at the top
+\newcommand{\MyName}[1]{\noindent{\textsc{\LARGE{\color{Maroon}#1}}}} % Font color of your name at the top
 %% Generally #1: margin left contents, #2: Dates #3 Title
 \newcommand{\NewBlock}[3]{\MarginText{\newline #1} {\noindent\hangindent=0em\hangafter=0\small\textit{#2}}\ \ $\cdotp$\ \ #3 \vspace{0.5em}} 
 \newcommand{\BlockTitle}[1]{\noindent\spacedlowsmallcaps{#1} \vspace{1em}}
@@ -142,7 +142,7 @@
 
 \NewBlock{}{2011--2012}{iOS Development, \textsc{Agile Perspectives --- Malaysia}}
 
-\Description{Developed iOS applications for an international insurance corporation, as well as one iOS app for a consumer-facing startup dealing in retail}
+\Description{Developed iOS applications for an international insurance corporation, as well as one iOS app for a consumer-facing startup dealing in retail.}
 
 \NewBlock{}{2010--2011}{System Administrator, \textsc{CouchSurfing.org}}
 
@@ -165,15 +165,15 @@
 
 \NewBlock{Sony Manufacturing}{2005--2007}{Engineer, \textsc{Sony EMCS --- Malaysia}}
 
-\Description{Developed Linux-based software required for manufacturing. Also wrangled servers used in manufacturing and supply chain. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK}
+\Description{Developed Linux-based software required for manufacturing. Also wrangled servers used in manufacturing and supply chain. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK.}
 %------------------------------------------------
 
 \Redvline
 %----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
+%	Technical SKILLS
 %----------------------------------------------------------------------------------------
 
-\BlockTitle{Computer Skills}
+\BlockTitle{Technical Skills}
 
 \Description{\MarginText{Basic} R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\#}
 
@@ -191,7 +191,7 @@
 
 \Description{\MarginText{Communication}Former Malaysian Public Speaking Champion}
 
-\Description{\MarginText{Entrepreneurship}Baylor Newventure Finalist -- Top 5}
+\Description{\MarginText{Entrepreneurship}Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch}
 
 \newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
 \settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
