@@ -46,7 +46,8 @@
 \newcommand{\MyName}[1]{\noindent{\textsc{\LARGE{\color{ThemeColor}#1}}}} % Font color of your name at the top
 %% Generally #1: margin left contents, #2: Dates #3 Title
 \newcommand{\NewBlock}[3]{\MarginText{\newline #1} {\noindent\hangindent=0em\hangafter=0\small\textit{#2}}\ \ $\cdotp$\ \ #3 \vspace{0.5em}} 
-\newcommand{\BlockTitle}[1]{\noindent\spacedlowsmallcaps{#1} \vspace{1em}}
+%% BADHACK here. Because otherwise the margin text immediately after this will be off
+\newcommand{\BlockTitle}[1]{\MarginText{\vspace{2.15em}}\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
