@@ -56,7 +56,7 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\MyName{Alvin Jude} % Your name <-- Slight problem here with the color, hence the braces. 
+\MyName{Alvin Jude} % Your name 
 
 \vspace{-0.3em}
 
@@ -89,10 +89,10 @@
 I prefer the trees but I see the forest.} 
 
 \Redvline
-
 %----------------------------------------------------------------------------------------
 %       EDUCATION
 %----------------------------------------------------------------------------------------
+
 \BlockTitle{Education}
 
 \NewBlock{Masters of \\Computer Science}{2012--Present}{Baylor University}
@@ -120,12 +120,49 @@ I prefer the trees but I see the forest.}
 
 %------------------------------------------------
 
+\Redvline
+%----------------------------------------------------------------------------------------
+%	Technical SKILLS
+%----------------------------------------------------------------------------------------
+
+\BlockTitle{Technical Skills}
+
+\Description{\MarginText{Basic} R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\# $\cdotp$\ Tomcat $\cdotp$\ HBase $\cdotp$ JQuery $\cdotp$ \textsc{Css3} $\cdotp$ HAProxy  $\cdotp$ Heartbeat $\cdotp$ DRBD }
+
+\Description{\MarginText{Intermediate} Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ Hibernate $\cdotp$\ Objective-C $\cdotp$\ Memcached}
+
+\Description{\MarginText{Advanced} NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP5 $\cdotp$\ MySQL $\cdotp$\ Java $\cdotp$\ Symfony $\cdotp$\ OpenVZ}
 
 \Redvline
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
 
+\BlockTitle{Non-technical Skills}
+
+\Description{\MarginText{Communication}Former Malaysian Public Speaking Champion}
+
+\Description{\MarginText{Entrepreneurship}Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Native}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Malay}}\ \ $\cdotp$\ \ \ Intermediate }
+
+% Suggest a new page here
+\Redvline
+\newpage
+\MyName{Alvin Jude} % Your name Again. 
+
+\Redvline
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
+
 \BlockTitle{Work Experience}
 
 \NewBlock{Baylor University}{2013--Present}{Research Assistant}
@@ -133,7 +170,7 @@ I prefer the trees but I see the forest.}
 \Description{Tasked to setup newly formed Human Computer Interaction lab. Mentored juniors, established engineering procedures and infrastructure. Performed research in Hand-Gestural interaction and explored research options with other next-generation devices. \\Reference: G. Michael Poor\ \ $\cdotp$\ \href{mailto:michael\_poor@baylor.edu}{michael\_poor@baylor.edu}}
 
 \NewBlock{}{2012--2013}{Teaching Assistant}
-
+\textsf{}
 \Description{On top of general TA duties, also introduced fixes and developer's manual to software used in-house for teaching databases. 
 \\ Reference: Greg Speegle\ \ $\cdotp$\ \ \href{mailto:greg\_speegle@baylor.edu}{greg\_speegle@baylor.edu}}
 
@@ -152,7 +189,6 @@ I prefer the trees but I see the forest.}
 \Description{Daily operations: monitoring, security, optimization, deployment, etc. Tools of the trade included Puppet, Zabbix, HAProxy. Deployed a cluster of static content servers (NGinX) to reduce the load off the dynamic servers which resulted in much higher reliability.}
 
 %------------------------------------------------
-
 \NewBlock{Aflexi}{2009--2010}{System Engineer}
 
 \Description{Aflexi was a CDN Software startup, and is currently a division of OnApp. My responsibilities were more DevOps involving backend development and system administration. I built a monitoring infrastructure (traditionally done with Nagios) with custom scripts running on a specialized Collectd infrastructure to feed PowerDNS for DNS-based CDN routing. Tools of the trade also included Puppet, Zabbix, Nagios, Reprepro, RRD.
@@ -170,39 +206,7 @@ I prefer the trees but I see the forest.}
 
 \Description{Developed Linux-based software required for manufacturing. Developed a tool used to trace products which helped cut down tracability time from 2 working days to about 4 hours. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK.}
 %------------------------------------------------
+\Redvline
 
 \Redvline
-%----------------------------------------------------------------------------------------
-%	Technical SKILLS
-%----------------------------------------------------------------------------------------
-
-\BlockTitle{Technical Skills}
-
-\Description{\MarginText{Basic} R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\# $\cdotp$\ HBase}
-
-\Description{\MarginText{Intermediate} Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ \textsc{svn} $\cdotp$\ Objective-C $\cdotp$\ Android}
-
-\Description{\MarginText{Advanced} NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP $\cdotp$\ MySQL $\cdotp$\ Java $\cdotp$\ Symfony}
-
-%------------------------------------------------
-\Redvline
-%----------------------------------------------------------------------------------------
-%	OTHER INFORMATION
-%----------------------------------------------------------------------------------------
-
-\BlockTitle{Other Information}
-
-\Description{\MarginText{Communication}Former Malaysian Public Speaking Champion}
-
-\Description{\MarginText{Entrepreneurship}Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch}
-
-\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
-\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
-
-\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Native}
-
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\parbox{\langbox}{\textsc{Malay}}\ \ $\cdotp$\ \ \ Intermediate }
-
 \end{document}  
