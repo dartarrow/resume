@@ -20,18 +20,20 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{scrartcl}
+\documentclass[a4paper]{scrartcl}
 
-\reversemarginpar % Move the margin to the left of the page 
+%\reversemarginpar % Move the margin to the left of the page 
 \pagenumbering{gobble} % No need for page numbers
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}} % New command defining the margin text style
+
 
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
-
+\usepackage{hyperref} % Required for adding links       and customizing them
 \usepackage{multicol}
-\setlength{\multicolsep}{0pt} 
 
-\usepackage{hyperref} % Required for adding links	and customizing them
+\setlength{\multicolsep}{0pt} 
+\setlength\parindent{0pt} 
+
+
 
 %% Setup themes based on color. Some of my favorite: MidnightBlue, Teal, RoyalNavy, RubineRed
 \colorlet{ThemeColor}{Maroon}
@@ -43,9 +45,10 @@
 \newcommand{\Redvline}[0]{\vspace{0.5em}\noindent{\color{ThemeColor}\rule{11.8cm}{0.4pt}}}
 \newcommand{\MyName}[1]{\noindent{\textsc{\LARGE{\color{ThemeColor}#1}}}} % Font color of your name at the top
 %% Generally #1: margin left contents, #2: Dates #3 Title
-\newcommand{\NewBlock}[3]{\MarginText{\newline #1} {\noindent\hangindent=0em\hangafter=0\small\textit{#2}}\ \ $\cdotp$\ \ #3 \vspace{0.5em}} 
+\newcommand{\NewBlock}[3]{
+    #1\ \ $\cdotp$\ \ #2\ \ $\cdotp$\ \ #3 \vspace{0.5em}} 
 %% BADHACK here. Because otherwise the margin text immediately after this will be off
-\newcommand{\BlockTitle}[1]{\MarginText{\vspace{2.15em}}\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
+\newcommand{\BlockTitle}[1]{\textsc{\vspace{0.15em}}\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -63,11 +66,11 @@
 \Redvline
 
 \begin{multicols}{2}\vspace{0.5em}
-\Columize{nationality}{Malaysian} % Birthplace and date
+\Columize{nationality}{Malaysian}
 
-\Columize{d.o.b.}{9 March 1984} % Birthplace and date
+\Columize{d.o.b.}{9 March 1984} 
 
-\Columize{residence}{Waco, TX} % Birthplace and date
+\Columize{residence}{San Jose, CA} 
 
 \columnbreak
 
@@ -81,7 +84,7 @@
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
-\BlockTitle{About} % About heading, could be used for a quotation or short profile or "goals" 
+%\BlockTitle{About} % About heading, could be used for a quotation or short profile or "goals" 
 
 \Description{As a former DevOps, I enjoy working on the whole stack. My primary research interest lies is in the human factors of computer science; my masters thesis will be in the area of Human Computer Interaction, specifically involving accessibility with gestures. My goal is to make interaction easier at all levels, including the developer level. I strive to increase my breadth of knowledge, to allow me better understanding of the utilization of technology from both consumer and business perspective, while actively maintaining my deep technical roots.
 \\
@@ -95,9 +98,14 @@ I prefer the trees but I see the forest.}
 
 \BlockTitle{Education}
 
-\NewBlock{Masters of \\Computer Science}{2012--Present}{Baylor University}
+\NewBlock{Masters of Computer Science}{2012--Present}{Baylor University}
 
-\Description{Research Area: Human Computer Interaction}
+\Description{\textsc{Specialization: }Human Computer Interaction
+\newline
+\textsc{Thesis:} Giving the Users a Hand: Towards Touchless Hand Gestures for the Desktop
+}
+
+
 %------------------------------------------------
 %------------------------------------------------
 
@@ -126,11 +134,11 @@ I prefer the trees but I see the forest.}
 
 \BlockTitle{Technical Skills}
 
-\Description{\MarginText{Basic} R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\# $\cdotp$\ Tomcat $\cdotp$\ HBase $\cdotp$ JQuery $\cdotp$ \textsc{Css3} $\cdotp$ HAProxy  $\cdotp$ Heartbeat $\cdotp$ DRBD }
+\Description{\textsc{Basic}: R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\# $\cdotp$\ Tomcat $\cdotp$\ HBase $\cdotp$ JQuery $\cdotp$ \textsc{Css3} $\cdotp$ HAProxy  $\cdotp$ Heartbeat $\cdotp$ DRBD }
 
-\Description{\MarginText{Intermediate} Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ Hibernate $\cdotp$\ Objective-C $\cdotp$\ Memcached}
+\Description{\textsc{Intermediate}: Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ Hibernate $\cdotp$\ Objective-C $\cdotp$\ Memcached}
 
-\Description{\MarginText{Advanced} NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP5 $\cdotp$\ MySQL $\cdotp$\ Java $\cdotp$\ Symfony $\cdotp$\ OpenVZ}
+\Description{\textsc{Advanced}: NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP5 $\cdotp$\ MySQL $\cdotp$\ Java $\cdotp$\ Symfony $\cdotp$\ OpenVZ}
 
 \Redvline
 %----------------------------------------------------------------------------------------
@@ -139,14 +147,14 @@ I prefer the trees but I see the forest.}
 
 \BlockTitle{Non-technical Skills}
 
-\Description{\MarginText{Communication}Former Malaysian Public Speaking Champion}
+\Description{\textsc{Communication}Former Malaysian Public Speaking Champion}
 
-\Description{\MarginText{Entrepreneurship}Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch}
+\Description{\textsc{Entrepreneurship}Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch}
 
 \newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
 \settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
 
-\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Native}
+\Description{\textsc{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Native}
 
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
