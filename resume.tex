@@ -34,10 +34,10 @@
 \usepackage
 [
         a4paper,% other options: a3paper, a5paper, etc
-        left=2.5cm,
-        right=2.5cm,
-        top=2cm,
-        bottom=2cm,
+        left=1.5cm,
+        right=1.5cm,
+        top=1.8cm,
+        bottom=1.8cm,
         % use vmargin=2cm to make vertical margins equal to 2cm.
         % us  hmargin=3cm to make horizontal margins equal to 3cm.
         % use margin=3cm to make all margins  equal to 3cm.
@@ -62,6 +62,7 @@
     #1\ \ $\cdotp$\ \ #2\ \ $\cdotp$\ \ #3}
 %% BADHACK here. Because otherwise the margin text immediately after this will be off
 \newcommand{\BlockTitle}[1]{\textsc{\vspace{0.15em}}\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
+\newcommand{\Publication}[5]{{#1}\newline{#2}\newline{#3}{#5}\newline\href{http://dx.doi.org/{#4}}{http://dx.doi.org/{#4}}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -118,23 +119,25 @@ I believe software is increasingly complex, but they need not be complicated.
 
 \BlockTitle{Education}
 
+\begin{multicols}{2}
+\Description{Masters of Computer Science
 
-Masters of Computer Science $\cdotp$\ 2012--2014 $\cdotp$\ Baylor University
+Baylor University $\cdotp$\ 2012--2014
 
-\Description{\textsc{Specialization: }Human Computer Interaction
+%\textsc{Specialization: }Human Computer Interaction
 
 \textsc{Thesis:} Giving the Users a Hand: Towards Touchless Hand Gestures for the Desktop
 }
 
+\Description{Bachelor of Computer Science
 
-%------------------------------------------------
-%------------------------------------------------
-Bachelor of Computer Science  $\cdotp$\ 2002--2005 $\cdotp$\ Coventry University
+Coventry University $\cdotp$\ 2002--2005
 
-\Description{\textsc{Rank: }Honours, Second Class Upper
+%\textsc{Rank: }Honours, Second Class Upper
 
 \textsc{Thesis:} Remote PC Manipulation via PDA over Bluetooth
 }
+\end{multicols}
 %------------------------------------------------
 
 \Redvline
@@ -144,13 +147,18 @@ Bachelor of Computer Science  $\cdotp$\ 2002--2005 $\cdotp$\ Coventry University
 
 \BlockTitle{Publications}
 
-\Description{\textsl{Personal Space: User Defined Gesture Space for GUI Interaction}. Alvin Jude, G. Michael Poor, and Darren Guinness. 2014.
-In CHI '14 Extended Abstracts on Human Factors in Computing Systems.
-(Toronto, Canada), ACM.
-\href{http://doi.acm.org/10.1145/2559206.2581242}{http://doi.acm.org/10.1145/2559206.2581242}}
+\begin{multicols}{2}
+\Description{\Publication{Personal Space: User Defined Gesture Space for GUI Interaction.}
+{Alvin Jude, G. Michael Poor, and Darren Guinness.}
+{CHI '14 Extended Abstracts on Human Factors in Computing Systems, (Toronto, Canada), ACM}
+{10.1145/2559206.2581242}
+{2014}}
 
-\Description{\textsl{An Evaluation of Touchless Hand Gestural Interaction for Pointing Tasks with Preferred and Non-preferred Hands}. Alvin Jude, G. Michael Poor, and Darren Guinness. 2014.
-In NordiCHI '14 Proceedings of the 8th Nordic Conference on Human-Computer Interaction, (Helsinki, Finland), ACM. \href{http://dx.doi.org/10.1145/2639189.2641207}{http://dx.doi.org/10.1145/2639189.2641207}}
+\Description{\Publication{An Evaluation of Touchless Hand Gestural Interaction for Pointing Tasks with Preferred and Non-preferred Hands.}
+{Alvin Jude, G. Michael Poor, and Darren Guinness.}
+{NordiCHI '14 Proceedings of the 8th Nordic Conference on Human-Computer Interaction, (Helsinki, Finland), ACM.
+{10.1145/2639189.2641207}
+{2014}}
 
 \Description{\textsl{Evaluating Multimodal Interaction with Gestures and Speech for Point and Select Tasks}.
 Alvin Jude, G. Michael Poor, and Darren Guinness. 2014.
@@ -169,6 +177,8 @@ In SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM
 \Description{\textsl{Modeling Mid-air Gestures With Spherical Coordinates.} Darren Guinness, Andrew Seung, G. Michael Poor, Ashley Dover, and Alvin Jude. 2015.
 In SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM. \textsl{(Best Poster Award)} \href{http://dx.doi.org/10.1145/2788940.2794356}{http://dx.doi.org/10.1145/2788940.2794356}}
 %------------------------------------------------
+
+\end{multicols}
 
 \Redvline
 %----------------------------------------------------------------------------------------
