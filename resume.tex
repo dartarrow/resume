@@ -55,7 +55,7 @@
 \newlength{\datebox}\settowidth{\datebox}{2014 to present} % Set the width of the date box in each block
 \newcommand{\Columize}[2]{\noindent \parbox{2cm}{{#1}} {#2} } % Add some white space after each new entry
 \newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
-\newcommand{\Redvline}[0]{\vspace{0.5em}\noindent{\color{ThemeColor}\rule{18cm}{0.4pt}}}
+\newcommand{\Redvline}[0]{\vspace{0em}\noindent{\color{ThemeColor}\rule{18cm}{0.4pt}}\vspace{-0.5em}}
 \newcommand{\MyName}[1]{\noindent{\textsc{\LARGE{\color{ThemeColor}#1}}}} % Font color of your name at the top
 %% Generally #1: margin left contents, #2: Dates #3 Title
 \newcommand{\NewBlock}[3]{
@@ -75,9 +75,8 @@
 
 \MyName{Alvin Jude} % Your name
 
-\vspace{-0.3em}
+%\vspace{-0.3em}
 
-\Redvline
 
 \begin{multicols}{3}
 \href{mailto:alvin@dartarrow.net}{alvin@dartarrow.net} % Email address
@@ -96,6 +95,7 @@
 
 \end{multicols}
 
+\Redvline
 \vspace{1em} % Extra white space between the personal information section and goal
 
 %\BlockTitle{About} % About heading, could be used for a quotation or short profile or "goals"
@@ -120,6 +120,7 @@ I believe software is increasingly complex, but they need not be complicated.
 
 \textsc{Thesis:} Giving the Users a Hand: Towards Touchless Hand Gestures for the Desktop
 }
+
 \Description{Bachelor of Computer Science $\cdotp$\ Coventry University $\cdotp$\ 2002--2005
 
 \textsc{Thesis:} Remote PC Manipulation via PDA over Bluetooth
@@ -133,26 +134,29 @@ I believe software is increasingly complex, but they need not be complicated.
 
 \BlockTitle{Publications}
 
+\Description{\Publication{Reporting and Visualizing Fitts’ Law: Dataset, Tools and Methodologies}
+{Alvin Jude, Darren Guinness, and G. Michael Poor}
+{CHI '16 Extended Abstracts on Human Factors in Computing Systems, (Sam Jose, CA), ACM}
+{10.1145/2851581.2892364}
+{2016}}
 
-  \Description{\Publication{Reporting and Visualizing Fitts’ Law: Dataset, Tools and Methodologies}
-  {Alvin Jude, Darren Guinness, and G. Michael Poor}
-  {CHI '16 Extended Abstracts on Human Factors in Computing Systems, (Sam Jose, CA), ACM}
-  {10.1145/2851581.2892364}
-  {2016}}
+\Description{\Publication{Evaluating Item-Item Similarity Algorithms for Movies}
+{Lucas Colucci, Prachi Doshi, Kun-Lin Lee, Jiajie Liang, Yin Lin, Ishan Vashishtha, Jia Zhang, and Alvin Jude}
+{CHI '16 Extended Abstracts on Human Factors in Computing Systems, (Sam Jose, CA), ACM}
+{10.1145/2851581.2892362}
+{2016}}
 
+\Description{\Publication{Models for Rested Touchless Gestural Interaction}
+{Darren Guinness, Alvin Jude, G. Michael Poor, and Ashley Dover}
+{SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM}
+{10.1145/2788940.2788948}
+{2015}}
 
-  \Description{\Publication{Evaluating Item-Item Similarity Algorithms for Movies}
-  {Lucas Colucci, Prachi Doshi, Kun-Lin Lee, Jiajie Liang, Yin Lin, Ishan Vashishtha, Jia Zhang, and Alvin Jude}
-  {CHI '16 Extended Abstracts on Human Factors in Computing Systems, (Sam Jose, CA), ACM}
-  {10.1145/2851581.2892362}
-  {2016}}
-
-  \Description{\Publication{Models for Rested Touchless Gestural Interaction}
-  {Darren Guinness, Alvin Jude, G. Michael Poor, and Ashley Dover}
-  {SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM}
-  {10.1145/2788940.2788948}
-  {2015}}
-
+\Description{\Publication{Modeling Mid-air Gestures With Spherical Coordinates}
+{Darren Guinness, Andrew Seung, Ashley Dover, G. Michael Poor, and Alvin Jude}
+{SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM}
+{10.1145/2788940.2794356}
+{2015}}
 
 \Description{\Publication{Personal Space: User Defined Gesture Space for GUI Interaction.}
 {Alvin Jude, G. Michael Poor, and Darren Guinness}
@@ -178,9 +182,7 @@ I believe software is increasingly complex, but they need not be complicated.
 {10.1145/2661334.2661398}
 {2014}}
 
-%------------------------------------------------
 
-\newpage
 \Redvline
 %----------------------------------------------------------------------------------------
 %	Technical SKILLS
