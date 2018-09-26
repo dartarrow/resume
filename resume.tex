@@ -31,6 +31,7 @@
 \usepackage{enumitem}
 \setlist{nolistsep,leftmargin=*}
 \usepackage{enumitem}
+\usepackage{verbatim}
 \usepackage
 [
         a4paper,% other options: a3paper, a5paper, etc
@@ -54,7 +55,7 @@
 \hypersetup{colorlinks, breaklinks, urlcolor=ThemeColor, linkcolor=ThemeColor} % Set link colors
 \newlength{\datebox}\settowidth{\datebox}{2014 to present} % Set the width of the date box in each block
 \newcommand{\Columize}[2]{\noindent \parbox{2cm}{{#1}} {#2} } % Add some white space after each new entry
-\newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\small{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 \newcommand{\Redvline}[0]{\vspace{0em}\noindent{\color{ThemeColor}\rule{18cm}{0.4pt}}\vspace{-0.5em}}
 \newcommand{\MyName}[1]{\noindent{\textsc{\LARGE{\color{ThemeColor}#1}}}} % Font color of your name at the top
 %% Generally #1: margin left contents, #2: Dates #3 Title
@@ -63,7 +64,7 @@
 %% BADHACK here. Because otherwise the margin text immediately after this will be off
 \newcommand{\BlockTitle}[1]{\textsc{\vspace{0.15em}}\noindent{\spacedlowsmallcaps{#1}}\vspace{1em}}
 %\newcommand{\Publication}[5]{{#1}\newline{#2}\newline{#3} ({#5})\newline\href{http://dx.doi.org/#4}{http://dx.doi.org/{#4}}}
-\newcommand{\Publication}[5]{{#1}\newline{#2}\newline{#3} ({#5})}
+\newcommand{\Publication}[5]{\textbf{{#1}}\newline\hspace{1cm}{#2}\newline{#3}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -82,7 +83,7 @@
 
 \href{mailto:alvin@dartarrow.net}{alvin@dartarrow.net} % Email address
 \hspace*{\fill}
-\href{http://dartarrow.net}{http://dartarrow.net} % Personal website
+\href{http://dartarrow.net/research}{http://dartarrow.net/research} % Personal website
 \hspace*{\fill}
 \href{tel:+1 (254) 413 1023}{+1 (254) 413 1023}
 
@@ -91,16 +92,10 @@
 
 %\BlockTitle{About} % About heading, could be used for a quotation or short profile or "goals"
 
-\Description{I believe software is increasingly complex, but they need not be complicated.
-\\
-\\
-I am a Human-Computer Interaction researcher currently working in the domain of media discovery \& recommendation.
-%My goal in this area is to improve how we interact with large amounts of content, and how to build personalised libraries that people will actually like.
-My vision in general is to improve technology in general to make it more usable and especially accessibility.
-%with prior experience in next-generation input devices, specifically gestural interaction.
-I generally approach this by first identifying a problem, hypothesizing solutions, and later testing with prototypes and user-studies.
-I find that this approach leverages my prior experiences as sysadmin and technical team lead reasonably well, and leads to good research findings. }
-%The latter has resulted in peer-reviewed publications and patents.
+\Description{I am a Human-Computer Interaction researcher currently working in the domain of Digital Representation \& Interaction. My current research interests include spatial audio and mixed realities, ethics in AI, crowdsourcing, and human-centred machine learning.
+I have previously worked and published works on content discovery and recommendations, similarity, and mid-air gestural interaction \& pointing devices. I've also performed introspective research within the company to assess and improve internal systems and processes.
+I've previously held positions in system administration and software development. I seek to combine my deep technical background with my constantly improving understanding of human factors to make technology more human.
+}
 
 \Redvline
 %----------------------------------------------------------------------------------------
@@ -108,6 +103,8 @@ I find that this approach leverages my prior experiences as sysadmin and technic
 %----------------------------------------------------------------------------------------
 
 \BlockTitle{Education}
+
+\Description{Masters of Psychology $\cdotp$\ Arden University $\cdotp$\ 2018--2021 (expected)}
 
 \Description{Masters of Computer Science $\cdotp$\ Baylor University $\cdotp$\ 2012--2014
 
@@ -127,67 +124,150 @@ I find that this approach leverages my prior experiences as sysadmin and technic
 
 \BlockTitle{Publications}
 
+\Description{\Publication{Finding Similar Movies: Dataset, Tools, and Methods}
+{Hongkun Leng, Caleb De La Cruz Paulino, Momina Haider, Rui Lu, Zhehui Zhou, Ole Mengshoel, Per-Erik Brodin, Julien Forgeat, Alvin Jude}
+{HCI-Europe 2018. International Conference in Central Europe on Human Computer Interaction}
+{DOI unknown}
+{2018}}
+
+\Description{\Publication{I Don't Need To See That: Seeking, Avoiding, and Attempting to Control Video Content}
+{Jennifer Lee, Alvin Jude, Meral Shirazipour, Julien Forgeat}
+{CHI '18. Extended Abstracts on Human Factors in Computing Systems}
+{DOI unknown}
+{2018}}
+
+\Description{\Publication{Content-Based Top-N Recommendations With Perceived Similarity}
+{Charlie Wang, Arpita Agrawal, Xiaojun Li, Tanima Makkad, Ejaz Veljee, Ole Mengshoel, and Alvin Jude}
+{SMC '17. IEEE International Conference on Systems, Man, and Cybernetics}
+{DOI unknown}
+{2017}}
+
+\Description{\Publication{Bimanual Word Gesture Keyboards for Mid-air Gestures}
+{Garrett Benoit, G. Michael Poor, Alvin Jude}
+{CHI '17. Extended Abstracts on Human Factors in Computing Systems}
+{DOI unknown}
+{2017}}
+
+\Description{\Publication{Incremental Learning for Matrix Factorization in Recommender Systems}
+{Tong Yu, Ole Mengshoel, Alvin Jude, Eugen Feller, Julien Forgeat, Nimish Radia}
+{Big Data 2016. IEEE International Conference on Big Data}
+{unknown}
+{2016}}
+
 \Description{\Publication{Improving Gestural Interaction With Augmented Cursors}
 {Ashley Dover, G. Michael Poor, Darren Guinness, and Alvin Jude}
-{SUI '16 ACM Symposium on Spatial User Interaction (Tokyo, Japan), ACM (to appear)}
+{SUI '16. ACM Symposium on Spatial User Interaction}
 {10.1145/2983310.2985765}
 {2016}}
 
 \Description{\Publication{Grasp, Grab or Pinch? Identifying User Preference for In-Air Gestural Manipulation}
 {Alvin Jude, G. Michael Poor, and Darren Guinness}
-{SUI '16 ACM Symposium on Spatial User Interaction (Tokyo, Japan), ACM (to appear)}
+{SUI '16. ACM Symposium on Spatial User Interaction}
 {10.1145/2983310.2989209}
 {2016}}
 
 \Description{\Publication{Reporting and Visualizing Fitts’ Law: Dataset, Tools and Methodologies}
 {Alvin Jude, Darren Guinness, and G. Michael Poor}
-{CHI '16 Extended Abstracts on Human Factors in Computing Systems, (San Jose, CA), ACM}
+{CHI '16. Extended Abstracts on Human Factors in Computing Systems}
 {10.1145/2851581.2892364}
 {2016}}
 
 \Description{\Publication{Evaluating Item-Item Similarity Algorithms for Movies}
 {Lucas Colucci, Prachi Doshi, Kun-Lin Lee, Jiajie Liang, Yin Lin, Ishan Vashishtha, Jia Zhang, and Alvin Jude}
-{CHI '16 Extended Abstracts on Human Factors in Computing Systems, (San Jose, CA), ACM}
+{CHI '16. Extended Abstracts on Human Factors in Computing Systems}
 {10.1145/2851581.2892362}
 {2016}}
 
 \Description{\Publication{Models for Rested Touchless Gestural Interaction}
 {Darren Guinness, Alvin Jude, G. Michael Poor, and Ashley Dover}
-{SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM}
+{SUI '15. ACM Symposium on Spatial User Interaction}
 {10.1145/2788940.2788948}
 {2015}}
 
 \Description{\Publication{Modeling Mid-air Gestures With Spherical Coordinates}
 {Darren Guinness, Andrew Seung, Ashley Dover, G. Michael Poor, and Alvin Jude}
-{SUI '15 ACM Symposium on Spatial User Interaction (Los Angeles, CA, USA), ACM}
+{SUI '15. ACM Symposium on Spatial User Interaction}
 {10.1145/2788940.2794356}
 {2015}}
 
 \Description{\Publication{Personal Space: User Defined Gesture Space for GUI Interaction.}
 {Alvin Jude, G. Michael Poor, and Darren Guinness}
-{CHI '14 Extended Abstracts on Human Factors in Computing Systems, (Toronto, Canada), ACM}
+{CHI '14. Extended Abstracts on Human Factors in Computing Systems}
 {10.1145/2559206.2581242}
 {2014}}
 
 \Description{\Publication{An Evaluation of Touchless Hand Gestural Interaction for Pointing Tasks with Preferred and Non-preferred Hands.}
 {Alvin Jude, G. Michael Poor, and Darren Guinness}
-{NordiCHI '14 Proceedings of the 8th Nordic Conference on Human-Computer Interaction, (Helsinki, Finland), ACM}
+{NordiCHI '14. Proceedings of the 8th Nordic Conference on Human-Computer Interaction}
 {10.1145/2639189.2641207}
 {2014}}
 
 \Description{\Publication{Evaluating Multimodal Interaction with Gestures and Speech for Point and Select Tasks}
 {Alvin Jude, G. Michael Poor, and Darren Guinness}
-{NordiCHI '14 Proceedings of the 8th Nordic Conference on Human-Computer Interaction (Helsinki, Finland), ACM}
+{NordiCHI '14. Proceedings of the 8th Nordic Conference on Human-Computer Interaction}
 {10.1145/2639189.2670267}
 {2014}}
 
 \Description{\Publication{Gestures with Speech for Hand-Impaired Persons}
 {Darren Guinness, G. Michael Poor, and Alvin Jude}
-{ASSETS '14 Proceedings of the 16th International ACM SIGACCESS Conference on Computers and Accessibility (New York, NY, USA), ACM}
+{ASSETS '14. 16th International ACM SIGACCESS Conference on Computers and Accessibility}
 {10.1145/2661334.2661398}
 {2014}}
 
+\Redvline
+%----------------------------------------------------------------------------------------
+%	Writings
+%----------------------------------------------------------------------------------------
 
+\BlockTitle{Other Publications}
+
+\Description{\Publication{User study for media metadata extraction}
+{Alvin Jude, Ji-Yeon Yang, Jennifer Lee, Julien Forgeat, Meral Shirazipour}
+{Ericsson Research Blog: \footnotesize{https://www.ericsson.com/research-blog/user-study-media-metadata-extraction/}}
+{}
+{2018}}
+
+\Description{\Publication{Learning things we never knew we never knew}
+{Alvin Jude}
+{Ericsson Research Blog: \footnotesize{https://www.ericsson.com/research-blog/learning-things-never-knew-never-knew/}}
+{}
+{2018}}
+
+\Description{\Publication{The Future of Sports Visualization}
+{Alvin Jude}
+{Ericsson Research Blog: \footnotesize{https://www.ericsson.com/research-blog/future-sports-visualization/}}
+{}
+{2018}}
+
+\Description{\Publication{Patents}
+{6 patents filed in the area of recommender systems, and network integration thereof.}
+{1 patent in improving remote AR collaboration, 1 in improving usability of secure file sharing.}
+{}
+{}}
+
+\Description{\Publication{Internal Publication}
+{Ericsson Tech Insider: Recommender Systems}
+{Contributed to Ericsson CTO Trends 2018 -- Internet of Skills}
+{}
+{}}
+
+\Redvline
+%----------------------------------------------------------------------------------------
+% Service
+%----------------------------------------------------------------------------------------
+
+\BlockTitle{Service}
+\Description{
+\begin{itemize}
+    \item Conference section chair, HCI-Europe
+    \item Reviewer, ACM TOCHI, ACM CHI, IJHCI, ACM SUI, IEEE SMC
+    \item Ericsson Research Young Advisory Board
+    \item Speaker, FOSS.my. Topic: Passive monitoring with Collectd
+    \item Ericsson patent reviewer
+\end{itemize}
+}
+
+\newpage
 \Redvline
 %----------------------------------------------------------------------------------------
 %	Technical SKILLS
@@ -200,14 +280,62 @@ I find that this approach leverages my prior experiences as sysadmin and technic
 %\Description{\parbox{\techskills}{\textsc{Basic}}: R $\cdotp$\ \textsc{Matlab} $\cdotp$\ C\# $\cdotp$\ Tomcat $\cdotp$\ HBase $\cdotp$ JQuery $\cdotp$ \textsc{Css3} $\cdotp$ HAProxy  $\cdotp$ Heartbeat $\cdotp$ DRBD
 %\parbox{\techskills}{\textsc{Intermediate}}: Python $\cdotp$\ \LaTeX \ $\cdotp$\ C $\cdotp$\ PostgreSQL $\cdotp$\ Nmap $\cdotp$\ Git $\cdotp$\ Hibernate $\cdotp$\ Objective-C $\cdotp$\ Memcached
 %\parbox{\techskills}{\textsc{Advanced}}: NGinX $\cdotp$\ Puppet $\cdotp$\ Nagios $\cdotp$\ Collectd $\cdotp$\ PHP5 $\cdotp$\ MySQL $\cdotp$\ Java $\cdotp$\ Symfony $\cdotp$\ OpenVZ
-
-\Description{\parbox{\techskills}{\textsc{Basic}}: Photoshop $\cdotp$\ CSS3 $\cdotp$\ HTML5 $\cdotp$\ Ember.js $\cdotp$\ Cassandra $\cdotp$\ Nagios $\cdotp$\ Qualitative Research $\cdotp$\ Machine Learning
-
-\parbox{\techskills}{\textsc{Intermediate}}: Python $\cdotp$\ PHP5 $\cdotp$\ \LaTeX \ $\cdotp$\ JQuery $\cdotp$\ MySQL $\cdotp$\ R $\cdotp$\ Matlab $\cdotp$\ Java $\cdotp$\ Recommender Systems $\cdotp$\ Personalisation
-
-\parbox{\techskills}{\textsc{Advanced}}: User Experience (UX) $\cdotp$\ Usability Testing $\cdotp$\ Experimental Design $\cdotp$\ Hypothesis Testing $\cdotp$\ Gestural Interaction
+\Description{
+\begin{center}
+\begin{minipage}[t]{0.33333\textwidth}
+\raggedright
+\textsc{Basic}
+\begin{itemize}
+    \item NodeJS
+    \item CSS3
+    \item HTML5
+    \item Ember.js
+    \item Cassandra
+    \item Nagios
+    \item Qualitative Research
+    \item SPSS
+\end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{0.33333\textwidth}
+\textsc{Intermediate}
+\raggedright
+\begin{itemize}
+    \item Python
+    \item Machine Learning
+    \item JQuery
+    \item SQL
+    \item R
+    \item Matlab
+    \item Java
+    \item Personalisation
+    %\item Interactive Information Retrieval
+\end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{0.33333\textwidth}
+\textsc{Advanced}
+\raggedright
+\begin{itemize}
+    \item PHP
+    \item Recommender Systems
+    \item User Experience (UX)
+    \item Usability Testing
+    \item Experimental Design
+    \item Hypothesis Testing
+    \item Gestural Interaction
+    \item Quantitative Research
+\end{itemize}
+\end{minipage}
+\end{center}
 }
 
+\begin{comment}
+\Description{\parbox{\techskills}{\textsc{Basic}}: NodeJS $\cdotp$\ CSS3 $\cdotp$\ HTML5 $\cdotp$\ Ember.js $\cdotp$\ Cassandra $\cdotp$\ Nagios $\cdotp$\ Qualitative Research $\cdotp$\ Machine Learning
+
+\parbox{\techskills}{\textsc{Intermediate}}: Python $\cdotp$\ PHP5 $\cdotp$\ \LaTeX \ $\cdotp$\ JQuery $\cdotp$\ MySQL $\cdotp$\ R $\cdotp$\ Matlab $\cdotp$\ Java $\cdotp$\ Recommender Systems $\cdotp$\ Personalisation $\cdotp$\ Interactive Information Retrieval
+
+\parbox{\techskills}{\textsc{Advanced}}: User Experience (UX) $\cdotp$\ Usability Testing $\cdotp$\ Experimental Design $\cdotp$\ Hypothesis Testing $\cdotp$\ Gestural Interaction $\cdotp$\ Quantitative Research
+}
+\end{comment}
 \Redvline
 
 \BlockTitle{Other Skills}
@@ -218,7 +346,7 @@ I find that this approach leverages my prior experiences as sysadmin and technic
 
 \parbox{\nontechskills}{\textsc{Entrepreneurship}}: Baylor NewVenture 2014: Top-5 Finalist \& 3rd place Elevator Pitch
 
-\parbox{\nontechskills}{\textsc{Martial Arts}}: Taekwondo ($3^{rd}$ Dan Black Belt), Karate, Aikido, MMA, Krav Maga
+\parbox{\nontechskills}{\textsc{Martial Arts}}: Taekwondo, Karate, Aikido, MMA, Krav Maga
 }
 
 % Suggest a new page here
@@ -233,20 +361,22 @@ I find that this approach leverages my prior experiences as sysadmin and technic
 
 \BlockTitle{Work Experience}
 
-\NewBlock{Ericsson}{2014--present}{Researcher}
+\NewBlock{Ericsson}{2014--present}{Senior Researcher}
 
-\Description{Improved discovery of similar items by 38\%.
-Led usability testing of new content discovery methods with a European partner.
-Currently also performs self-driven research for patent portfolio, a next-generation media delivery platform, and research collaboration with academic partners.
-\\Reference: Nimish Radia\ \ $\cdotp$\ \ \href{mailto:nimish.radia@ericsson.com}{nimish.radia@ericsson.com}}
+\Description{Improved discovery of similar items by 38\%, saw research from conceptualisation and prototyping through to productization.
+Led usability testing of new content discovery methods with a European partner. Mentored over 20 students from Carnegie Mellon University as part of practicum project. Recruited and led 10 HCI interns.
+Performed self-driven research for patent portfolio. Defined \textit{Interaction} research agenda for current research area.
+%\\Reference: Nimish Radia\ \ $\cdotp$\ \ \href{mailto:nimish.radia@ericsson.com}{nimish.radia@ericsson.com}
+}
 
 \NewBlock{Baylor University}{2013--2014}{Research Assistant}
 
 \Description{Setup new HCI lab. Mentored juniors, established engineering procedures and infrastructure. Performed research in hand-gestural interaction and explored research options with other next-generation input devices.
 Overhauled software used for teaching database.
-Assisted in developing lab curriculum for teaching operating systems.\\
-Reference: G. Michael Poor\ \ $\cdotp$\ \href{mailto:michael\_poor@baylor.edu}{michael\_poor@baylor.edu} \\
-Reference: Greg Speegle\ \ $\cdotp$\ \ \href{mailto:greg\_speegle@baylor.edu}{greg\_speegle@baylor.edu}}
+Assisted in developing lab curriculum for teaching operating systems.
+%Reference: G. Michael Poor\ \ $\cdotp$\ \href{mailto:michael\_poor@baylor.edu}{michael\_poor@baylor.edu} \\
+%Reference: Greg Speegle\ \ $\cdotp$\ \ \href{mailto:greg\_speegle@baylor.edu}{greg\_speegle@baylor.edu}
+}
 
 %------------------------------------------------
 
@@ -265,22 +395,24 @@ Deployed a cluster of static content servers with NGinX to reduce the load off t
 \end{enumerate}
 
 %------------------------------------------------
-\NewBlock{Aflexi}{2009--2010}{System Engineer}
+\NewBlock{Aflexi (now OnApp CDN)}{2009--2010}{System Engineer}
 
-\Description{Aflexi was a CDN Software startup, and is currently a division of OnApp. Responsibilities were more DevOps involving backend development and system administration. Built a monitoring infrastructure from the ground up (traditionally done with Nagios) with custom scripts running on a specialized Collectd infrastructure; used to feed PowerDNS for DNS-based CDN routing. Tools of the trade included Puppet, Zabbix, Nagios, Reprepro, RRD.
-\\Reference: Whei Wong\ \ $\cdotp$\ \ \href{mailto:whei.wong@onapp.com}{whei.wong@onapp.com}}
+\Description{Responsibilities were more DevOps involving backend development and system administration. Built a custom monitoring infrastructure from the ground up (traditionally done with Nagios) on a specialized Collectd infrastructure used to feed PowerDNS for DNS-based CDN routing. Tools of the trade included Puppet, Zabbix, Nagios, RRD.
+%\\Reference: Whei Wong\ \ $\cdotp$\ \ \href{mailto:whei.wong@onapp.com}{whei.wong@onapp.com}
+}
 
 %------------------------------------------------
 
-\NewBlock{iMocha Consulting}{2007--2010}{Team Lead}
+\NewBlock{iMocha Consulting}{2007--2010}{Software Engineer}
 
-\Description{Initially hired as a Junior Java Developer, but quickly tasked to build and run a LAMP team of up to 8 people, dealing mostly with financial institutions. Responsibilities included hiring, firing, and mentoring programmers, system administrators, system analysts, and interns, as well as requirements gathering from clients.
-\\Reference: Koh Kok Wei\ \ $\cdotp$\ \ \href{mailto:kokwei@imocha.com.my}{kokwei@imocha.com.my}}
+\Description{Initially hired as a Junior Java Developer, but quickly tasked to build and run a LAMP team of up to 8 people, dealing mostly with financial institutions. Responsibilities leading development work, mentoring programmers, system administrators, system analysts, and interns, as well as requirements gathering from clients.
+%\\Reference: Koh Kok Wei\ \ $\cdotp$\ \ \href{mailto:kokwei@imocha.com.my}{kokwei@imocha.com.my}
+}
 %------------------------------------------------
 
 \NewBlock{Sony Manufacturing}{2005--2007}{Engineer}
 
-\Description{Developed Linux-based software required for manufacturing. Developed a tool used to trace products which helped cut down tracability time from 2 working days to about 4 hours. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK.}
+\Description{Developed a tool used to trace products which helped cut down traceability time from 2 working days to about 4 hours. Tools of the trade included MFC, VB.NET, PHP, Postgres, GTK.}
 %------------------------------------------------
 \Redvline
 \end{document}
